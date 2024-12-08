@@ -10,14 +10,10 @@
     <string name="lorem_ipsum">
 null
     </string>
-    <string name="enter_a">Enter A</string>
-    <string name="enter_b">Button B</string>
-    <string name="button">Deez Nuts</string>
-    <string name="enter_A">MichealJ</string>
-    <string name="enter_B">Oprah</string>
     <string name="Button1">Button</string>
     <string name="kuyjgedwsqa">Button</string>
     <string name="username">Username</string>
     <string name="chorecoins_99999">ChoreCoins 99999</string>
+    <string name="test"/>
 
 </resources>
