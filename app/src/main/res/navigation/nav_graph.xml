@@ -25,4 +25,7 @@
                 android:id="@+id/action_SecondFragment_to_FirstFragment"
                 app:destination="@id/FirstFragment"/>
     </fragment>
+    <activity android:id="@+id/parentDashboardScreen2"
+              android:name="com.example.househeroesv2.ParentDashboardScreen"
+              android:label="ParentDashboardScreen"/>
 </navigation>
