@@ -8,12 +8,16 @@
     <string name="previous">Previous</string>
 
     <string name="lorem_ipsum">
-null
+        null
     </string>
     <string name="Button1">Button</string>
     <string name="kuyjgedwsqa">Button</string>
     <string name="username">Username</string>
     <string name="chorecoins_99999">ChoreCoins 99999</string>
     <string name="test"/>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
