@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity"
+        android:background="@color/orange_peach">
+
+    <!-- Title -->
+    <TextView
+            android:id="@+id/rewardShopTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reward Shop"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:layout_alignParentStart="true" />
+    
+
+    <!-- Coin Display -->
+    <TextView
+            android:id="@+id/coinDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ChoreCoins 9999"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:background="@color/mint_green"
+            android:padding="5dp" />
+
+    <!-- Store Header -->
+    <TextView
+            android:id="@+id/storeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chore Coin Store"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp" />
+
+    <!-- Choices Layout -->
+    <LinearLayout
+            android:id="@+id/choicesLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/storeHeader"
+            android:layout_marginTop="20dp">
+
+        <!-- Choice 1 -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@color/mint_green" />
+            <TextView
+                    android:text="Choice 1"
+                    android:textSize="14sp"
+                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <TextView
+                    android:text="30 coins"
+                    android:textSize="12sp"
+                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
