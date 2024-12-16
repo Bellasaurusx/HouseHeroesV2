@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/house_heroes_logo"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:layout_centerInParent="true" />
 
     <!-- Tagline -->
@@ -22,9 +22,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@drawable/house_heroes_logo"
             android:layout_centerHorizontal="true"
-            android:paddingTop="20dp"
+            android:paddingTop="15dp"
             android:text="Cleaning Made Fun!"
-            android:textColor="#FFFFFF"
+            android:textColor="#F5A469"
             android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
 </RelativeLayout>

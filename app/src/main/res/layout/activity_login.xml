@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#121212"
+        android:background="@drawable/splash_background"
         android:padding="16dp">
 
     <LinearLayout
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Log In"
-                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_orange"
                 android:textColor="#FFFFFF"
                 android:layout_marginBottom="16dp" />
 
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:text="Don't have an account? Sign Up"
-                android:textColor="#007AFF"
+                android:textColor="#F5a469"
                 android:gravity="center"
                 android:padding="8dp"
                 android:clickable="true"

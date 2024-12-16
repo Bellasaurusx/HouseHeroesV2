@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.househeroesv2.databinding.ActivityLoginBinding
+import android.widget.Toast
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -26,6 +27,25 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
+
+        binding.loginButton.setOnClickListener {
+            val email = binding.emailEditText.text.toString()
+            val password = binding.passwordEditText.text.toString()
+
+            if (isValidCredentials(email, password)) {
+                val intent = Intent(this, PortalActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun isValidCredentials(email: String, password: String): Boolean {
+        val validEmail = "test@example.com"
+        val validPassword = "password123"
+
+        return email == validEmail && password == validPassword
     }
 }
-

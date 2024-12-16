@@ -5,7 +5,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#121212"
+        android:background="@drawable/splash_background"
         android:padding="16dp">
 
 
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
-                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_orange"
                 android:textColor="#FFFFFF"
                 android:layout_marginBottom="16dp" />
 
