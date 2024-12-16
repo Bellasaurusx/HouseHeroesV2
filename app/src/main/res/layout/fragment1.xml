@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".MainActivity" android:background="@color/orange_peach">
+        tools:context=".MainActivity" android:background="@color/sky_blue">
     <!-- Header Section -->
     <TextView
             android:text="UserName"
