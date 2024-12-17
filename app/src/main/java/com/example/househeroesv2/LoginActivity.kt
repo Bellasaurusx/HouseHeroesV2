@@ -2,50 +2,55 @@ package com.example.househeroesv2
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.househeroesv2.databinding.ActivityLoginBinding
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.househeroesv2.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Bind the layout
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
+        // Link to Sign-Up Page
         binding.signUpLink.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
 
+        // Handle Login Button
         binding.loginButton.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
 
-            if (isValidCredentials(email, password)) {
-                val intent = Intent(this, PortalActivity::class.java)
-                startActivity(intent)
-                finish()
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                loginUser(email, password)
             } else {
-                Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun isValidCredentials(email: String, password: String): Boolean {
-        val validEmail = "test@example.com"
-        val validPassword = "password123"
-
-        return email == validEmail && password == validPassword
+    private fun loginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Navigate to PortalActivity on success
+                    val intent = Intent(this, PortalActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Login Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }

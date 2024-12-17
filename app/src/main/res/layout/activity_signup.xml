@@ -34,7 +34,7 @@
             android:padding="16dp">
 
         <EditText
-                android:id="@+id/signupEmailEditText"
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
@@ -43,18 +43,9 @@
                 android:padding="12dp"
                 android:layout_marginBottom="16dp" />
 
-        <EditText
-                android:id="@+id/confirmEmailEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Re-Enter Email"
-                android:inputType="textEmailAddress"
-                android:background="@drawable/rounded_input"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
 
         <EditText
-                android:id="@+id/signupPasswordEditText"
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -63,15 +54,6 @@
                 android:padding="12dp"
                 android:layout_marginBottom="16dp" />
 
-        <EditText
-                android:id="@+id/confirmPasswordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Re-Type Password"
-                android:inputType="textPassword"
-                android:background="@drawable/rounded_input"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
 
         <Button
                 android:id="@+id/signupButton"
