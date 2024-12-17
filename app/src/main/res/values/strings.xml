@@ -7,6 +7,24 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="default_user_name">User Name</string>
+
+    <string name="profile_picture_desc">Profile picture</string>
+
+    <string name="hint_chore_input">Enter a new chore</string>
+    <string name="btn_add_chore">Add Chore</string>
+
+    <string name="btn_add_child">Add Child</string>
+
+    <string name="btn_change_password">Change Password</string>
+
+    <string name="btn_delete_account">Delete Account</string>
+
+    <string name="title_delete_account">Delete Account</string>
+    <string name="warning_delete_account">Are you sure you want to delete your account? This action cannot be undone.</string>
+    <string name="btn_confirm_delete">Confirm Deletion</string>
+    <string name="btn_cancel_delete">Cancel</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id
         interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus dui nec risus. Maecenas non sodales

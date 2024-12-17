@@ -22,10 +22,16 @@
             tools:layout="@layout/fragment_second">
 
         <action
-                android:id="@+id/action_SecondFragment_to_FirstFragment"
-                app:destination="@id/FirstFragment"/>
+                android:id="@+id/action_SecondFragment_to_ParentDashboardScreen"
+                app:destination="@id/parentDashboardScreen2"/>
     </fragment>
-    <activity android:id="@+id/parentDashboardScreen2"
-              android:name="com.example.househeroesv2.ParentDashboardScreen"
-              android:label="ParentDashboardScreen"/>
+    <activity
+            android:id="@+id/parentDashboardScreen2"
+            android:name="com.example.househeroesv2.ParentDashboardScreen"
+            android:label="ParentDashboardScreen"/>
+
+    <activity
+            android:id="@+id/deleteAccountActivity"
+            android:name="com.example.househeroesv2.DeleteAccountActivity"
+            android:label="DeleteAccountActivity"/>
 </navigation>
