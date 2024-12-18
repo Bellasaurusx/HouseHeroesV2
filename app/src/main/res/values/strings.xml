@@ -17,6 +17,11 @@
 
     <string name="btn_add_child">Add Child</string>
 
+    <string name="title_add_child">Add Child</string>
+    <string name="hint_child_name">Enter child\'s name</string>
+    <string name="btn_save_child">Save</string>
+    <string name="btn_cancel_child">Cancel</string>
+
     <string name="btn_change_password">Change Password</string>
 
     <string name="title_change_password">Change Password</string>
