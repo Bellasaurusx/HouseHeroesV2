@@ -8,6 +8,7 @@
     <string name="previous">Previous</string>
 
     <string name="default_user_name">User Name</string>
+    <string name="parent_name">Parent\'s Name</string>
 
     <string name="profile_picture_desc">Profile picture</string>
 
@@ -17,6 +18,13 @@
     <string name="btn_add_child">Add Child</string>
 
     <string name="btn_change_password">Change Password</string>
+
+    <string name="title_change_password">Change Password</string>
+    <string name="hint_old_password">Enter old password</string>
+    <string name="hint_new_password">Enter new password</string>
+    <string name="hint_confirm_password">Confirm new password</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
 
     <string name="btn_delete_account">Delete Account</string>
 
