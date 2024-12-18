@@ -9,7 +9,7 @@
         tools:context=".MainActivity"
         android:background="@color/orange_peach">
 
-    <!-- Title -->
+
     <TextView
             android:id="@+id/rewardShopTitle"
             android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
             android:layout_alignParentStart="true" />
     
 
-    <!-- Coin Display -->
+
     <TextView
             android:id="@+id/coinDisplay"
             android:layout_width="wrap_content"
@@ -31,10 +31,9 @@
             android:textColor="@color/black"
             android:layout_alignParentEnd="true"
             android:layout_margin="10dp"
-            android:background="@color/mint_green"
             android:padding="5dp" />
 
-    <!-- Store Header -->
+
     <TextView
             android:id="@+id/storeHeader"
             android:layout_width="wrap_content"
@@ -45,7 +44,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp" />
 
-    <!-- Choices Layout -->
+
     <LinearLayout
             android:id="@+id/choicesLayout"
             android:orientation="horizontal"
@@ -76,7 +75,7 @@
                     android:textSize="12sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
         </LinearLayout>
-        <!-- Choice 1 -->
+        <!-- Choice 2 -->
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -90,10 +89,52 @@
                     android:src="@color/mint_green" />
             <TextView
                     android:text="Choice 2"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
             <TextView
                     android:text="60 coins"
+                    android:textSize="12sp"
+                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <!-- Choice 3 -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@color/mint_green" />
+            <TextView
+                    android:text="Choice 3"
+                    android:textSize="20sp"
+                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <TextView
+                    android:text="80 coins"
+                    android:textSize="12sp"
+                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <!-- Choice 4 -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@color/mint_green" />
+            <TextView
+                    android:text="Choice 4"
+                    android:textSize="20sp"
+                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <TextView
+                    android:text="90 coins"
                     android:textSize="12sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
         </LinearLayout>

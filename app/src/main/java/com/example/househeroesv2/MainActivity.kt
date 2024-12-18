@@ -1,10 +1,8 @@
 package com.example.househeroesv2
 
 import android.os.Bundle
-import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
 import com.example.househeroesv2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button1.setOnClickListener {
-            replaceFragment(Fragment1())
+            replaceFragment(ChoreScreen())
         }
         binding.button2.setOnClickListener {
-            replaceFragment(Fragment2())
+            replaceFragment(RewardShop())
         }
         binding.button3.setOnClickListener {
-            replaceFragment(Fragment3())
+            replaceFragment(ParentSettings())
         }
     }
 

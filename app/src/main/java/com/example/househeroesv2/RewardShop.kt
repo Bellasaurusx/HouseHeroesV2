@@ -3,5 +3,5 @@ import androidx.fragment.app.Fragment
 
 
 
-class Fragment3 : Fragment(R.layout.fragment3) {
+class RewardShop : Fragment(R.layout.reward_shop) {
 }

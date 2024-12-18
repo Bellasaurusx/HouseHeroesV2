@@ -9,7 +9,7 @@
         tools:context=".MainActivity" android:background="@color/sky_blue">
     <!-- Header Section -->
     <TextView
-            android:text="UserName"
+            android:text="Weclome: Zezima"
             android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView3"/>
@@ -26,10 +26,11 @@
                 android:layout_height="wrap_content" android:layout_weight="1"/>
         <TextView
                 android:id="@+id/textView2"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
+                android:gravity="end"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="                                    ChoreCoin: 99999$"
+                android:text=""
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
     </LinearLayout>
