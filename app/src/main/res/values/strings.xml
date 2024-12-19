@@ -12,8 +12,12 @@
 
     <string name="profile_picture_desc">Profile picture</string>
 
-    <string name="hint_chore_input">Enter a new chore</string>
     <string name="btn_add_chore">Add Chore</string>
+
+    <string name="title_add_chore">Add Chore</string>
+    <string name="hint_chore_name">Enter chore name</string>
+    <string name="btn_save_chore">Save</string>
+    <string name="btn_cancel_chore">Cancel</string>
 
     <string name="btn_add_child">Add Child</string>
 
