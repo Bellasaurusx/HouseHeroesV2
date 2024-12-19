@@ -63,14 +63,18 @@
                 android:gravity="center">
 
             <ImageView
+                    android:id="@+id/choice1Image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:contentDescription="@string/app_name"
                     android:src="@color/mint_green" />
             <TextView
-                    android:text="Choice 1"
+                    android:id="@+id/choice1Title"
+                    android:text="Robux"
                     android:textSize="20sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
             <TextView
+                    android:id="@+id/choice1Cost"
                     android:text="30 coins"
                     android:textSize="12sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
@@ -84,14 +88,18 @@
                 android:gravity="center">
 
             <ImageView
+                    android:id="@+id/choice2Image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:contentDescription="@string/app_name"
                     android:src="@color/mint_green" />
             <TextView
-                    android:text="Choice 2"
+                    android:id="@+id/choice2Title"
+                    android:text="dine out"
                     android:textSize="20sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
             <TextView
+                    android:id="@+id/choice2Cost"
                     android:text="60 coins"
                     android:textSize="12sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
@@ -105,14 +113,18 @@
                 android:gravity="center">
 
             <ImageView
+                    android:id="@+id/choice3Image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:contentDescription="@string/app_name"
                     android:src="@color/mint_green" />
             <TextView
-                    android:text="Choice 3"
+                    android:id="@+id/choice3Title"
+                    android:text="Toy Choice"
                     android:textSize="20sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
             <TextView
+                    android:id="@+id/choice3Cost"
                     android:text="80 coins"
                     android:textSize="12sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
@@ -126,14 +138,18 @@
                 android:gravity="center">
 
             <ImageView
+                    android:id="@+id/choice4Image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:contentDescription="@string/app_name"
                     android:src="@color/mint_green" />
             <TextView
-                    android:text="Choice 4"
+                    android:id="@+id/choice4Title"
+                    android:text="Late Night"
                     android:textSize="20sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
             <TextView
+                    android:id="@+id/choice4Cost"
                     android:text="90 coins"
                     android:textSize="12sp"
                     android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
