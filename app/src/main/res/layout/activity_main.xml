@@ -8,6 +8,8 @@
         android:fitsSystemWindows="true"
         android:orientation="horizontal" tools:context=".MainActivity">
 
+    <include layout="@layout/activity_splash"/>
+
     <!-- first frag test -->
     <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainer"
