@@ -6,9 +6,12 @@ import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels// import page
 
 class ChoreScreen : Fragment(R.layout.chore_screen) {
-    private var choreCoins = 1 // set starting amount to 1 coin
+    private val sharedViewModel: SharedViewModel by activityViewModels()// this is for coins
+
+    private lateinit var coinTextView: TextView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -20,17 +23,12 @@ class ChoreScreen : Fragment(R.layout.chore_screen) {
         val coinTextView = view.findViewById<TextView>(R.id.textView2)
 
         // for the format of the coins
-        fun coinDisplay() {
-            coinTextView.text = "ChoreCoin: ${String.format("%05d", choreCoins)}"
+        sharedViewModel.choreCoins.observe(viewLifecycleOwner) { coinCount ->
+            coinTextView.text = "ChoreCoin: ${String.format("%05d", coinCount)}"
         }
-
-        //init display for coins
-        coinDisplay()
-
-        // count for task check off
+        // coin counter stuff
         fun completeTask(message: String) {
-            choreCoins += 10
-            coinDisplay()
+            sharedViewModel.addCoins(10) // adds money to coins
             Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
         }
 

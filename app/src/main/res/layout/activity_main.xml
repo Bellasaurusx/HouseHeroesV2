@@ -35,15 +35,18 @@
             android:backgroundTint="@color/sunset_yellow"
             android:layout_alignParentBottom="true"
     />
-    <Button
-            android:text="Store"
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/button2"
+            android:text="Store"
             android:layout_marginBottom="53dp"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="33dp"/>
+            android:layout_marginEnd="33dp"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            app:backgroundTint="@color/sunset_yellow"/>
 
 </RelativeLayout>
