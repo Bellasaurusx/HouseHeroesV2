@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         //these are for the buttons that are pressed
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         binding.button3.setOnClickListener {
             replaceFragment(ParentSettings())
         }
+        binding.button4.setOnClickListener {
+            replaceFragment(HighScores())
+        }
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -35,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
 
         // this is to hide the reward shop fragment
-        if (fragment is RewardShop || fragment is ParentSettings) {
+        if (fragment is RewardShop || fragment is ParentSettings || fragment is HighScores) {
             binding.button2.visibility = View.GONE
         } else {
             binding.button2.visibility = View.VISIBLE

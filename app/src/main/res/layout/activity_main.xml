@@ -14,10 +14,21 @@
             android:layout_width="match_parent"
             android:layout_height="600dp"/>
     <Button
-            android:text="Child"
+            android:text="Chore List"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/button1"
+            android:backgroundTint="@color/sunset_yellow"
+            android:textColor="@color/black"
+            android:layout_marginBottom="200dp"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentBottom="true"
+    />
+    <Button
+            android:text="HighScores"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/button4"
             android:backgroundTint="@color/sunset_yellow"
             android:textColor="@color/black"
             android:layout_marginBottom="140dp"
@@ -25,12 +36,12 @@
             android:layout_alignParentBottom="true"
     />
     <Button
-            android:text="Parent"
+            android:text="Parent Settings"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/button3"
             android:textColor="@color/black"
-            android:layout_marginBottom="200dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/sunset_yellow"
             android:layout_alignParentBottom="true"
