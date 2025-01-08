@@ -68,13 +68,31 @@ class PortalActivity : AppCompatActivity() {
     private fun setupButtonsBasedOnRole(role: String?) {
         when (role) {
             "parent" -> {
-                binding.parentPortalButton.setOnClickListener {
-                    val intent = Intent(this, ParentPasscodeActivity::class.java)
-                    startActivity(intent)
-                }
+                val currentUser = auth.currentUser
+                if (currentUser != null) {
+                    val userId = currentUser.uid
 
-                binding.childPortalButton.isEnabled = false
-                binding.childPortalButton.alpha = 0.5f
+                    db.collection("Users").document(userId).get()
+                        .addOnSuccessListener { document ->
+                            if (document != null && document.exists()) {
+                                val passcode = document.getString("passcode")
+
+                                if (passcode.isNullOrEmpty()) {
+                                    val intent = Intent(this, SetPasscodeActivity::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } else {
+                                    binding.parentPortalButton.setOnClickListener {
+                                        val intent = Intent(this, ParentPasscodeActivity::class.java)
+                                        startActivity(intent)
+                                    }
+                                }
+                            }
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                        }
+                }
             }
             "child" -> {
                 binding.childPortalButton.setOnClickListener {
@@ -90,5 +108,6 @@ class PortalActivity : AppCompatActivity() {
             }
         }
     }
+
 }
 

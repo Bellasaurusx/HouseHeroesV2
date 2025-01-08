@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.househeroesv2.databinding.ActivityParentPasscodeBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 
 class SetPasscodeActivity : AppCompatActivity() {
 
@@ -41,10 +42,10 @@ class SetPasscodeActivity : AppCompatActivity() {
 
         if (currentUser != null) {
             val userId = currentUser.uid
-            val passcodeData = hashMapOf("passcode" to passcode)
+            val passcodeData: Map<String, Any> = mapOf("passcode" to passcode)
 
             db.collection("Users").document(userId)
-                .update(passcodeData)
+                .set(passcodeData, SetOptions.merge())
                 .addOnSuccessListener {
                     Toast.makeText(this, "Passcode set successfully!", Toast.LENGTH_SHORT).show()
                     navigateToParentPortal()
