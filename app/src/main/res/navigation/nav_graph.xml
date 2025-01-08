@@ -29,7 +29,21 @@
             android:id="@+id/parentDashboardScreen2"
             android:name="com.example.househeroesv2.ParentDashboardScreen"
             android:label="ParentDashboardScreen"/>
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_AddChoreActivity"
+            app:destination="@id/addChoreActivity" />
 
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_AddChildActivity"
+            app:destination="@id/addChildActivity" />
+
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_ChangePasswordActivity"
+            app:destination="@id/changePasswordActivity" />
+
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_DeleteAccountActivity"
+            app:destination="@id/deleteAccountActivity" />
     <activity
             android:id="@+id/deleteAccountActivity"
             android:name="com.example.househeroesv2.DeleteAccountActivity"

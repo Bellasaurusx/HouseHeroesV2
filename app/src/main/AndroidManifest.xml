@@ -28,6 +28,26 @@
                 android:label="ParentDashboardScreen"
                 android:exported="true"/>
 
+        <activity
+                android:name=".AddChoreActivity"
+                android:label="Add Chore"
+                android:exported="true" />
+
+        <activity
+                android:name=".AddChildActivity"
+                android:label="Add Child"
+                android:exported="true" />
+
+        <activity
+                android:name=".ChangePasswordActivity"
+                android:label="Change Password"
+                android:exported="true" />
+
+        <activity
+                android:name=".DeleteAccountActivity"
+                android:label="Delete Account"
+                android:exported="true" />
+
     </application>
 
 </manifest>
