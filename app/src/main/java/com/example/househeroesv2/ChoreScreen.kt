@@ -1,5 +1,6 @@
 package com.example.househeroesv2
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -15,6 +16,7 @@ class ChoreScreen : Fragment(R.layout.chore_screen) {
 
     private val sharedViewModel: SharedViewModel by activityViewModels()
 
+    @SuppressLint("SetTextI18n", "DefaultLocale")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

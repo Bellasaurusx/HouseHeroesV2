@@ -15,6 +15,16 @@
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="600dp"/>
+
+    <Button
+            android:text="Profile"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:id="@+id/button5"
+            android:backgroundTint="@color/sunset_yellow"
+            android:textColor="@color/black"
+            android:layout_marginStart="54dp"
+    />
     <Button
             android:text="Chore List"
             android:layout_width="150dp"

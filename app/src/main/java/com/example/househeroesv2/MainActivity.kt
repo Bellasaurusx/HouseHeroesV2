@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         binding.button4.setOnClickListener {
             replaceFragment(HighScores())
         }
+        binding.button5.setOnClickListener {
+            replaceFragment(ProfileSettings())
+        }
     }
 
     private fun replaceFragment(fragment: Fragment) {
