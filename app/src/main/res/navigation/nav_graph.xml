@@ -49,12 +49,15 @@
             android:name="com.example.househeroesv2.DeleteAccountActivity"
             android:label="DeleteAccountActivity"/>
 
-    <activity android:id="@+id/changePasswordActivity" android:name="com.example.househeroesv2.ChangePasswordActivity"
+    <activity android:id="@+id/changePasswordActivity"
+              android:name="com.example.househeroesv2.ChangePasswordActivity"
               android:label="ChangePasswordActivity"/>
 
-    <activity android:id="@+id/addChoreActivity" android:name="com.example.househeroesv2.AddChoreActivity"
+    <activity android:id="@+id/addChoreActivity"
+              android:name="com.example.househeroesv2.AddChoreActivity"
               android:label="AddChoreActivity"/>
 
-    <activity android:id="@+id/addChildActivity" android:name="com.example.househeroesv2.AddChildActivity"
+    <activity android:id="@+id/addChildActivity"
+              android:name="com.example.househeroesv2.AddChildActivity"
               android:label="AddChildActivity"/>
 </navigation>

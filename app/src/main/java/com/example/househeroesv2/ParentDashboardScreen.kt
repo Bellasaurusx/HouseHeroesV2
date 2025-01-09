@@ -21,17 +21,20 @@ class ParentDashboardScreen : AppCompatActivity() {
 
         val addChoreButton: Button = findViewById(R.id.add_chore_button)
         addChoreButton.setOnClickListener {
-            // Add chore action
+            val intent = Intent(this, AddChoreActivity::class.java)
+            startActivity(intent)
         }
 
         val addChildButton: Button = findViewById(R.id.add_child_button)
         addChildButton.setOnClickListener {
-            // Add child action
+            val intent = Intent(this, AddChildActivity::class.java)
+            startActivity(intent)
         }
 
         val changePasswordButton: Button = findViewById(R.id.change_password_button)
         changePasswordButton.setOnClickListener {
-            // Add change password action
+            val intent = Intent(this, ChangePasswordActivity::class.java)
+            startActivity(intent)
         }
 
         val deleteAccountButton: Button = findViewById(R.id.delete_account_button)
