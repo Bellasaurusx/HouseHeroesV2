@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rewardShopLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        tools:context=".MainActivity"
-        android:background="@color/orange_peach">
+        android:background="@color/orange_peach"
+        tools:context=".MainActivity">
 
+    <!-- Top App Bar (MaterialToolbar) -->
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/rewardShopToolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:backgroundTint="@color/sunset_yellow"
+            android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+            android:title="Reward Shop"
+            android:titleTextColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-            android:id="@+id/rewardShopTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reward Shop"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:layout_alignParentStart="true" />
-    
-
-
+    <!-- Coin display, anchored to the right end of the toolbar -->
     <TextView
             android:id="@+id/coinDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ChoreCoins 9999"
+            android:text="ChoreCoins: 9999"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="10dp"
-            android:padding="5dp" />
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@id/rewardShopToolbar"
+            app:layout_constraintBottom_toBottomOf="@id/rewardShopToolbar"
+            app:layout_constraintEnd_toEndOf="@id/rewardShopToolbar"
+            android:gravity="center_vertical" />
 
-
+    <!-- Subheader: "Chore Coin Store" -->
     <TextView
             android:id="@+id/storeHeader"
             android:layout_width="wrap_content"
@@ -40,118 +44,203 @@
             android:text="Chore Coin Store"
             android:textSize="24sp"
             android:textColor="@color/black"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp" />
-
-
-    <LinearLayout
-            android:id="@+id/choicesLayout"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:gravity="center"
-            android:layout_below="@id/storeHeader"
-            android:layout_marginTop="20dp">
+            app:layout_constraintTop_toBottomOf="@id/rewardShopToolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
 
-        <!-- Choice 1 -->
-        <LinearLayout
-                android:orientation="vertical"
+
+    <GridLayout
+            android:id="@+id/choicesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="1"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/storeHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:gravity="center">
+                android:layout_margin="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
 
-            <ImageView
-                    android:id="@+id/choice1Image"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@color/mint_green" />
-            <TextView
-                    android:id="@+id/choice1Title"
-                    android:text="Robux"
-                    android:textSize="20sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-            <TextView
-                    android:id="@+id/choice1Cost"
-                    android:text="30 coins"
-                    android:textSize="12sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-        </LinearLayout>
-        <!-- Choice 2 -->
-        <LinearLayout
-                android:orientation="vertical"
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                <ImageView
+                        android:id="@+id/choice1Image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@color/mint_green" />
+
+                <TextView
+                        android:id="@+id/choice1Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Robux"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+
+                <TextView
+                        android:id="@+id/choice1Cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 coins"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:gravity="center">
+                android:layout_margin="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
 
-            <ImageView
-                    android:id="@+id/choice2Image"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@color/mint_green" />
-            <TextView
-                    android:id="@+id/choice2Title"
-                    android:text="dine out"
-                    android:textSize="20sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-            <TextView
-                    android:id="@+id/choice2Cost"
-                    android:text="60 coins"
-                    android:textSize="12sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-        </LinearLayout>
-        <!-- Choice 3 -->
-        <LinearLayout
-                android:orientation="vertical"
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                <ImageView
+                        android:id="@+id/choice2Image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@color/mint_green" />
+
+                <TextView
+                        android:id="@+id/choice2Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dine out"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+
+                <TextView
+                        android:id="@+id/choice2Cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60 coins"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:gravity="center">
+                android:layout_margin="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
 
-            <ImageView
-                    android:id="@+id/choice3Image"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@color/mint_green" />
-            <TextView
-                    android:id="@+id/choice3Title"
-                    android:text="Toy Choice"
-                    android:textSize="20sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-            <TextView
-                    android:id="@+id/choice3Cost"
-                    android:text="80 coins"
-                    android:textSize="12sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-        </LinearLayout>
-        <!-- Choice 4 -->
-        <LinearLayout
-                android:orientation="vertical"
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                <ImageView
+                        android:id="@+id/choice3Image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@color/mint_green" />
+
+                <TextView
+                        android:id="@+id/choice3Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toy Choice"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+
+                <TextView
+                        android:id="@+id/choice3Cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="80 coins"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:gravity="center">
+                android:layout_margin="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
 
-            <ImageView
-                    android:id="@+id/choice4Image"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@color/mint_green" />
-            <TextView
-                    android:id="@+id/choice4Title"
-                    android:text="Late Night"
-                    android:textSize="20sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-            <TextView
-                    android:id="@+id/choice4Cost"
-                    android:text="90 coins"
-                    android:textSize="12sp"
-                    android:gravity="center"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-        </LinearLayout>
-    </LinearLayout>
-</RelativeLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                <ImageView
+                        android:id="@+id/choice4Image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@color/mint_green" />
+
+                <TextView
+                        android:id="@+id/choice4Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Late Night"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+
+                <TextView
+                        android:id="@+id/choice4Cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="90 coins"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

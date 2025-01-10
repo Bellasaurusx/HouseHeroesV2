@@ -12,6 +12,6 @@
             android:text="Parent settings"
             android:textSize="30sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView3"/>
+            android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
