@@ -148,6 +148,18 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\eckke\OneDrive\Pictures\Full Sail\PnP3\da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                       <entry key="text">
                                         <value>
                                           <PersistentState>
@@ -170,6 +182,13 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="C:\Users\eckke\OneDrive\Pictures\Full Sail\PnP3\da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg" />
+                                      <entry key="outputName" value="default_user_image" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -294,6 +313,11 @@
                                 </PersistentState>
                               </value>
                             </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
                           </map>
                         </option>
                       </PersistentState>
