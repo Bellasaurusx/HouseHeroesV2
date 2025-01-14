@@ -13,22 +13,25 @@ class ChoreMain : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val chores = mutableListOf(
-            Chore("Take out the trash", false)
-            Chore("Clean your room", false)
-            Chore("Do the dishes", true)
-            Chore("Complete homework", true)
+            Chore("Take out the trash", false, false),
+            Chore("Clean your room", false, false),
+            Chore("Do the dishes", true, false),
+            Chore("Complete homework", true, false)
         )
 
         val adapter = ChoreAdapter(chores) { chore, position ->
-            if (chore.locked) {
-                Snackbar.make(recycleView, "This task is locked!", Snackbar.LENGTH_SHORT).
+            if (!chore.isActionable()) {
+                showSnackbar(recyclerView, "This task is not actionable!")
             } else {
                 chore.completed = true
                 adapter.notifyItemChanged(position)
+                showSnackbar(recyclerView, "Task completed: $(chore.name)")
             }
         }
         recyclerView.adapter = adapter
     }
+    private fun showSnackbar(view: RecyclerView, message: String) {
+        Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
+    }
 }
 
-data class Chore(val name: String, var locked: Boolean, var completed: Boolean = false)
