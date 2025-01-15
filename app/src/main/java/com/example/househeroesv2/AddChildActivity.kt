@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.EditText
 import android.widget.Button
 import android.widget.Toast
-
+// works
 class AddChildActivity : AppCompatActivity() {
 
     private lateinit var childNameEditText: EditText
