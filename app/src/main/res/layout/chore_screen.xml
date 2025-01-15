@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity"
+        android:background="@color/sky_blue">
+
+    <!-- Header Section -->
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/textView3"
+            android:layout_marginTop="10dp">
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <!-- Chores Section -->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+        <!-- Chore 1 -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="8dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do Laundry"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/circle_checkbox_selector"
+                    android:background="@android:color/transparent"
+                    android:text="" />
+
+            <Button
+                    android:id="@+id/chore1VideoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Tutorial"
+                    android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Chore 2 -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="8dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sweep"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/circle_checkbox_selector"
+                    android:background="@android:color/transparent"
+                    android:text="" />
+
+            <Button
+                    android:id="@+id/chore2VideoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Tutorial"
+                    android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Chore 3 -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="8dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Take trash out"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/circle_checkbox_selector"
+                    android:background="@android:color/transparent"
+                    android:text="" />
+
+            <Button
+                    android:id="@+id/chore3VideoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Tutorial"
+                    android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Chore 4 -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="8dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wash Dishes"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/circle_checkbox_selector"
+                    android:background="@android:color/transparent"
+                    android:text="" />
+
+            <Button
+                    android:id="@+id/chore4VideoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Tutorial"
+                    android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
