@@ -11,6 +11,7 @@
     <include layout="@layout/activity_splash"/>
 
     <!-- first frag test -->
+    <!--Ui backup-->
     <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
@@ -61,7 +62,7 @@
     <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="110dp"
             android:text="Store"
             android:layout_marginBottom="53dp"
             android:layout_alignParentEnd="true"
