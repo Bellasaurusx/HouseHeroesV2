@@ -5,17 +5,23 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Delay for 3 seconds, then navigate to LoginActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            val user = FirebaseAuth.getInstance().currentUser
+            if (user != null) {
+                // Navigate to Portal if the user is logged in
+                startActivity(Intent(this, PortalActivity::class.java))
+            } else {
+                // Navigate to Login screen
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
             finish()
-        }, 3000) // 3000ms = 3 seconds
+        }, 2000) //
     }
 }
