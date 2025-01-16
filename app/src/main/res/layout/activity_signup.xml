@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/splash_background"
+        android:padding="16dp">
+
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <ImageView
+                android:id="@+id/logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/house_heroes_logo"
+                android:contentDescription="@string/app_logo"
+                android:layout_marginBottom="24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+        <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+        <EditText
+                android:id="@+id/roleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your role (parent/child)"
+                android:inputType="text"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+        <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+        <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+        <Button
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:backgroundTint="@color/button_orange"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</LinearLayout>

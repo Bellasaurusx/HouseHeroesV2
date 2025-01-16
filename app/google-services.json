@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090792528722",
+    "project_id": "househeroes-d95c9",
+    "storage_bucket": "househeroes-d95c9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090792528722:android:44f288925490053d0fb88b",
+        "android_client_info": {
+          "package_name": "com.example.househeroesv2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjaolZDlcNmRlMLYBiLTCBajbBkp94fdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

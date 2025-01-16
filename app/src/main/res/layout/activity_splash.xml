@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/blue">
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_background">
 
+    <!-- Logo -->
     <ImageView
-            android:id="@+id/splash_logo"
-            android:layout_width="800dp"
-            android:layout_height="800dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/logox"
-            android:layout_centerInParent="true"/>
+            android:id="@+id/logoImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/house_heroes_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_centerInParent="true" />
+
+    <!-- Tagline -->
+    <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@drawable/house_heroes_logo"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="15dp"
+            android:text="Cleaning Made Fun!"
+            android:textColor="#F5A469"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 </RelativeLayout>

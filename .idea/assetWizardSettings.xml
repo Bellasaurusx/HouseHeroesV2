@@ -80,6 +80,8 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="C:\Users\devlu\Downloads\logo.png" />
+                                                <entry key="imagePath" value="C:\House_Heroes_App_Logo.png" />
+                                                <entry key="scalingPercent" value="74" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -107,6 +109,12 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="111a4a" />
                                     </map>
                                   </option>
                                 </PersistentState>
