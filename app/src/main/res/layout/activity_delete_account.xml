@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@color/blue">
+
+        <TextView
+                android:id="@+id/delete_account_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_delete_account"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+        <TextView
+                android:id="@+id/delete_account_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/warning_delete_account"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="32dp" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+            <Button
+                    android:id="@+id/confirm_delete_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_confirm_delete"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:backgroundTint="@color/orange_peach"
+                    android:textColor="@color/black"/>
+
+
+            <Button
+                    android:id="@+id/cancel_delete_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="141dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/btn_cancel_delete"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="@color/orange_peach"
+                    android:textColor="@color/black"/>
+
+
+
+        </LinearLayout>
+
+</LinearLayout>
