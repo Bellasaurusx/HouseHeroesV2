@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,15 +14,31 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val user = FirebaseAuth.getInstance().currentUser
+            val auth = FirebaseAuth.getInstance()
+            val user = auth.currentUser
+
             if (user != null) {
-                // Navigate to Portal if the user is logged in
-                startActivity(Intent(this, PortalActivity::class.java))
+                // Check if the user exists in Firestore
+                FirebaseFirestore.getInstance()
+                    .collection("Users")
+                    .document(user.uid)
+                    .get()
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful && task.result != null && task.result.exists()) {
+                            // User exists in Firestore, navigate to Portal
+                            startActivity(Intent(this, PortalActivity::class.java))
+                        } else {
+                            // User doesn't exist in Firestore, navigate to Login
+                            auth.signOut() // Ensure user is signed out
+                            startActivity(Intent(this, LoginActivity::class.java))
+                        }
+                        finish()
+                    }
             } else {
-                // Navigate to Login screen
+                // No user is logged in, navigate to Login screen
                 startActivity(Intent(this, LoginActivity::class.java))
+                finish()
             }
-            finish()
-        }, 1000) //
+        }, 1000) // Delay for 1 second
     }
 }
