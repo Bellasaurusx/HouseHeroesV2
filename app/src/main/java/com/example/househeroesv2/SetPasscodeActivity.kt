@@ -18,7 +18,6 @@ class SetPasscodeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Bind the layout
         binding = ActivityParentPasscodeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
