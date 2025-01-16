@@ -3,8 +3,7 @@ package com.example.househeroesv2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import android.content.Intent
-import android.widget.Button
+
 
 class ParentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
