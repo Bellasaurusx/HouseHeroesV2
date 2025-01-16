@@ -25,6 +25,7 @@
         <activity
                 android:name=".ParentDashboardScreen"
                 android:label="ParentDashboardScreen"
+                android:screenOrientation="portrait"
                 android:exported="true"/>
 
         <activity
@@ -46,6 +47,7 @@
                 android:name=".DeleteAccountActivity"
                 android:label="Delete Account"
                 android:exported="true" />
+
 
     </application>
 

@@ -71,18 +71,18 @@ class ChoreScreen : Fragment(R.layout.chore_screen) {
 
         // heres for uploaded videos
         chore1VideoButton.setOnClickListener {// do Laundry
-            openVideoTutorial("https://streamable.com/eovg4a")
+            openVideoTutorial("https://streamable.com/lvih8j")
         }
 
-        chore2VideoButton.setOnClickListener {// sweep
-            openVideoTutorial("https://www.youtube.com/watch?v=xvFZjo5PgG0")
+        chore2VideoButton.setOnClickListener {// Floors
+            openVideoTutorial("https://streamable.com/hktk6e")
         }
 
-        chore3VideoButton.setOnClickListener {// take out trash
-            openVideoTutorial("https://www.example.com/video3.mp4")
+        chore3VideoButton.setOnClickListener {// Dishes
+            openVideoTutorial("https://streamable.com/z9x13e")
         }
 
-        chore4VideoButton.setOnClickListener { //Wash dishes
+        chore4VideoButton.setOnClickListener { // toys
             openVideoTutorial("https://www.example.com/video4.mp4")
         }
     }
