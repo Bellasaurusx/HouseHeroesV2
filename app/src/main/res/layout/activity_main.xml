@@ -49,12 +49,23 @@
             android:layout_alignParentBottom="true"
     />
     <Button
-            android:text="Parent Settings"
+            android:text="Kids Settings"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/button3"
             android:textColor="@color/black"
             android:layout_marginBottom="20dp"
+            android:layout_marginStart="30dp"
+            android:backgroundTint="@color/sunset_yellow"
+            android:layout_alignParentBottom="true"
+    />
+    <Button
+            android:text="Parent Settings"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/button10"
+            android:textColor="@color/black"
+            android:layout_marginBottom="80dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/sunset_yellow"
             android:layout_alignParentBottom="true"

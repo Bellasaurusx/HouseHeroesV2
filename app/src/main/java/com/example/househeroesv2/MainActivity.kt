@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
         binding.button5.setOnClickListener {
             replaceFragment(ProfileSettings())
         }
+        binding.button10.setOnClickListener {
+            replaceFragment(ParentDashboardScreen())
+        }
+
     }
 
     private fun replaceFragment(fragment: Fragment) {

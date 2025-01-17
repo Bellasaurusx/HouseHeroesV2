@@ -22,7 +22,42 @@
             tools:layout="@layout/fragment_second">
 
         <action
-                android:id="@+id/action_SecondFragment_to_FirstFragment"
-                app:destination="@id/FirstFragment"/>
+                android:id="@+id/action_SecondFragment_to_ParentDashboardScreen"
+                app:destination="@id/parentDashboardScreen2"/>
     </fragment>
+    <activity
+            android:id="@+id/parentDashboardScreen2"
+            android:name="com.example.househeroesv2.ParentDashboardScreen"
+            android:label="ParentDashboardScreen"/>
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_AddChoreActivity"
+            app:destination="@id/addChoreActivity" />
+
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_AddChildActivity"
+            app:destination="@id/addChildActivity" />
+
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_ChangePasswordActivity"
+            app:destination="@id/changePasswordActivity" />
+
+    <action
+            android:id="@+id/ParentDashboardScreen2_to_DeleteAccountActivity"
+            app:destination="@id/deleteAccountActivity" />
+    <activity
+            android:id="@+id/deleteAccountActivity"
+            android:name="com.example.househeroesv2.DeleteAccountActivity"
+            android:label="DeleteAccountActivity"/>
+
+    <activity android:id="@+id/changePasswordActivity"
+              android:name="com.example.househeroesv2.ChangePasswordActivity"
+              android:label="ChangePasswordActivity"/>
+
+    <activity android:id="@+id/addChoreActivity"
+              android:name="com.example.househeroesv2.AddChoreActivity"
+              android:label="AddChoreActivity"/>
+
+    <activity android:id="@+id/addChildActivity"
+              android:name="com.example.househeroesv2.AddChildActivity"
+              android:label="AddChildActivity"/>
 </navigation>

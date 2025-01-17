@@ -2,6 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="teal">#67f3b5</color>
+    <color name="yellow">#f6c569</color>
+    <color name="orange">#f5a469</color>
+    <color name="button_orange">#f5a469</color>
     <!--added main colors -->
     <color name="orange_peach">#f5a469</color>
     <color name="sky_blue">#67E0F2</color>

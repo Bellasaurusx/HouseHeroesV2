@@ -9,7 +9,7 @@
         tools:context=".MainActivity" android:background="@color/sky_blue">
     <!-- Header Section -->
     <TextView
-            android:text="Parent settings"
+            android:text="Kids settings"
             android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_centerHorizontal="true"/>
