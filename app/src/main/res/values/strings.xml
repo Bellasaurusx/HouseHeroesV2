@@ -73,4 +73,30 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus vestibulum. Fusce
         dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="welcome_hero">Welcome, Hero!</string>
+    <string name="back">Back</string>
+    <string name="chore_list">Chore List</string>
+    <string name="parent_settings">Parent Settings</string>
+    <string name="store">Store</string>
+    <string name="kids_settings">Kids Settings</string>
+    <string name="highscores">HighScores</string>
+    <string name="todo">TODO</string>
+    <string name="sibling_list">Sibling List</string>
+    <string name="sibling_1">Sibling 1</string>
+    <string name="sibling_2">Sibling 2</string>
+    <string name="sibling_3">Sibling 3</string>
+    <string name="kids_settings1">Kids settings</string>
+    <string name="select_a_profile">Select a Profile</string>
+    <string name="choose_a_profile">Choose a Profile</string>
+    <string name="reward_shop">Reward Shop</string>
+    <string name="chorecoins_9999">ChoreCoins: 9999</string>
+    <string name="chore_coin_store">Chore Coin Store</string>
+    <string name="robux">Robux</string>
+    <string name="_30_coins">30 coins</string>
+    <string name="dine_out">dine out</string>
+    <string name="_60_coins">60 coins</string>
+    <string name="toy_choice">Toy Choice</string>
+    <string name="_80_coins">80 coins</string>
+    <string name="late_night">Late Night</string>
+    <string name="_90_coins">90 coins</string>
 </resources>

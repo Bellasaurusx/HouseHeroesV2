@@ -15,7 +15,7 @@
             android:layout_height="?attr/actionBarSize"
             android:backgroundTint="@color/sunset_yellow"
             android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
-            android:title="Sibling List"
+            android:title="@string/sibling_list"
             android:titleTextColor="@android:color/black"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Sibling 1"
+                            android:text="@string/sibling_1"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -86,7 +86,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:padding="16dp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical" tools:ignore="ExtraText">
 
                     >
                     <View
@@ -101,7 +101,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Sibling 2"
+                            android:text="@string/sibling_2"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -136,7 +136,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Sibling 3"
+                            android:text="@string/sibling_3"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />

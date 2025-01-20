@@ -12,7 +12,7 @@
             android:id="@+id/childWelcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome, Hero!"
+            android:text="@string/welcome_hero"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 </LinearLayout>

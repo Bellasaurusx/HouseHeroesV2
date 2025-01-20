@@ -13,7 +13,7 @@
             android:id="@+id/splash_logo"
             android:layout_width="800dp"
             android:layout_height="800dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/todo"
             android:src="@drawable/logox"
             android:layout_centerInParent="true"/>
 
@@ -32,7 +32,7 @@
             android:background="@null"
             android:layout_marginStart="54dp"/>
     <Button
-            android:text="Chore List"
+            android:text="@string/chore_list"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/button1"
@@ -43,7 +43,7 @@
             android:layout_alignParentBottom="true"
     />
     <Button
-            android:text="HighScores"
+            android:text="@string/highscores"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/button4"
@@ -54,7 +54,7 @@
             android:layout_alignParentBottom="true"
     />
     <Button
-            android:text="Kids Settings"
+            android:text="@string/kids_settings"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/button3"
@@ -65,7 +65,7 @@
             android:layout_alignParentBottom="true"
     />
     <Button
-            android:text="Parent Settings"
+            android:text="@string/parent_settings"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/button10"
@@ -79,7 +79,7 @@
             android:id="@+id/button2"
             android:layout_width="100dp"
             android:layout_height="110dp"
-            android:text="Store"
+            android:text="@string/store"
             android:layout_marginBottom="80dp"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
@@ -93,7 +93,7 @@
             android:id="@+id/backButton"
             android:layout_width="100dp"
             android:layout_height="60dp"
-            android:text="Back"
+            android:text="@string/back"
             android:layout_marginBottom="4dp"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
