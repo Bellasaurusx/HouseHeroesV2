@@ -6,9 +6,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        android:orientation="horizontal" tools:context=".MainActivity">
-
-    <include layout="@layout/activity_splash"/>
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        tools:context=".MainActivity">
+    <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="800dp"
+            android:layout_height="800dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/logox"
+            android:layout_centerInParent="true"/>
 
     <!-- first frag test -->
     <!--Ui backup-->
@@ -17,15 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="600dp"/>
 
-    <Button
-            android:text="Profile"
+    <ImageButton
             android:layout_width="100dp"
             android:layout_height="110dp"
             android:id="@+id/button5"
-            android:backgroundTint="@color/sunset_yellow"
-            android:textColor="@color/black"
-            android:layout_marginStart="54dp"
-    />
+            android:src="@drawable/tinytim"
+            android:background="@null"
+            android:layout_marginStart="54dp"/>
     <Button
             android:text="Chore List"
             android:layout_width="150dp"
@@ -33,7 +38,7 @@
             android:id="@+id/button1"
             android:backgroundTint="@color/sunset_yellow"
             android:textColor="@color/black"
-            android:layout_marginBottom="200dp"
+            android:layout_marginBottom="195dp"
             android:layout_marginStart="30dp"
             android:layout_alignParentBottom="true"
     />
@@ -44,7 +49,7 @@
             android:id="@+id/button4"
             android:backgroundTint="@color/sunset_yellow"
             android:textColor="@color/black"
-            android:layout_marginBottom="140dp"
+            android:layout_marginBottom="135dp"
             android:layout_marginStart="30dp"
             android:layout_alignParentBottom="true"
     />
@@ -54,7 +59,7 @@
             android:layout_height="60dp"
             android:id="@+id/button3"
             android:textColor="@color/black"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/sunset_yellow"
             android:layout_alignParentBottom="true"
@@ -65,7 +70,7 @@
             android:layout_height="60dp"
             android:id="@+id/button10"
             android:textColor="@color/black"
-            android:layout_marginBottom="80dp"
+            android:layout_marginBottom="75dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/sunset_yellow"
             android:layout_alignParentBottom="true"
@@ -75,7 +80,21 @@
             android:layout_width="100dp"
             android:layout_height="110dp"
             android:text="Store"
-            android:layout_marginBottom="53dp"
+            android:layout_marginBottom="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="33dp"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            app:backgroundTint="@color/sunset_yellow"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Back"
+            android:layout_marginBottom="4dp"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
             android:layout_alignParentBottom="true"

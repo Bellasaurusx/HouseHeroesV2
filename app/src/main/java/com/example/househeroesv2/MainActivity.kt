@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         binding.button10.setOnClickListener {
             replaceFragment(ParentDashboardScreen())
         }
+        binding.backButton.setOnClickListener {
+            replaceFragment(RewardShop())
+        }
 
     }
 
