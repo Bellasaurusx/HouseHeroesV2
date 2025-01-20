@@ -23,7 +23,7 @@
             android:layout_below="@drawable/house_heroes_logo"
             android:layout_centerHorizontal="true"
             android:paddingTop="15dp"
-            android:text="Cleaning Made Fun!"
+            android:text="@string/tagline"
             android:textColor="#F5A469"
             android:textStyle="bold"
             android:textSize="20sp"/>

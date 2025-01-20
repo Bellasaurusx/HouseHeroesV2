@@ -4,9 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="teal">#67f3b5</color>
     <color name="yellow">#f6c569</color>
-    <color name="blue">#67e0f2</color>
     <color name="orange">#f5a469</color>
-    <color name="gray">#7a989b</color>
     <color name="button_orange">#f5a469</color>
     <!--added main colors -->
     <color name="orange_peach">#f5a469</color>

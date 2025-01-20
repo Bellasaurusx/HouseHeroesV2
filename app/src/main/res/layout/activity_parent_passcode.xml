@@ -12,7 +12,7 @@
             android:id="@+id/passcodeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter Passcode"
+            android:text="@string/title_enter_passcode"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:layout_marginBottom="16dp" />
@@ -21,7 +21,7 @@
             android:id="@+id/passcodeInput"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="Passcode"
+            android:hint="@string/hint_passcode"
             android:inputType="numberPassword"
             android:padding="12dp"
             android:layout_marginBottom="16dp" />
@@ -30,7 +30,7 @@
             android:id="@+id/submitPasscodeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
+            android:text="@string/submit"
             android:backgroundTint="@color/blue"
             android:textColor="#FFFFFF" />
 </LinearLayout>
