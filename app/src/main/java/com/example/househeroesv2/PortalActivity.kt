@@ -23,7 +23,22 @@ class PortalActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
-        fetchUserRole()
+        checkAuthentication()
+    }
+    private fun checkAuthentication() {
+        val currentUser = auth.currentUser
+        if (currentUser == null) {
+            navigateToLogin()
+        } else {
+            fetchUserRole()
+        }
+    }
+
+    private fun navigateToLogin() {
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // Clear activity stack
+        startActivity(intent)
+        finish()
     }
 
     private fun fetchUserRole() {

@@ -1,16 +1,22 @@
 package com.example.househeroesv2
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.EmailAuthProvider
+import com.google.firebase.auth.FirebaseAuth
 
 class ChangePasswordActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change_password)
+
+        auth = FirebaseAuth.getInstance()
 
         val oldPasswordInput = findViewById<EditText>(R.id.old_password)
         val newPasswordInput = findViewById<EditText>(R.id.new_password)
@@ -33,20 +39,39 @@ class ChangePasswordActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Handle password change logic here
-            // TODO: Add real password update logic
-            Toast.makeText(this, "Password updated successfully", Toast.LENGTH_SHORT).show()
-
-            val intent = Intent(this, ParentDashboardScreen::class.java)
-            startActivity(intent)
-            finish()
+            updatePassword(oldPassword, newPassword)
         }
 
         cancelButton.setOnClickListener {
-
-            val intent = Intent(this, ParentDashboardScreen::class.java)
-            startActivity(intent)
             finish()
+        }
+    }
+
+    private fun updatePassword(oldPassword: String, newPassword: String) {
+        val user = auth.currentUser
+
+        if (user != null) {
+            val email = user.email
+            if (!email.isNullOrEmpty()) {
+                val credential = EmailAuthProvider.getCredential(email, oldPassword)
+
+                // Reauthenticate
+                user.reauthenticate(credential)
+                    .addOnSuccessListener {
+                        // Update password
+                        user.updatePassword(newPassword)
+                            .addOnSuccessListener {
+                                Toast.makeText(this, "Password updated successfully!", Toast.LENGTH_SHORT).show()
+                                finish()
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                            }
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(this, "Reauthentication failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
+            }
         }
     }
 }
