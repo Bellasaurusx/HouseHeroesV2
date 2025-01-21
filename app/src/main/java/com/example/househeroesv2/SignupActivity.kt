@@ -1,6 +1,7 @@
 package com.example.househeroesv2
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.househeroesv2.databinding.ActivitySignupBinding
@@ -22,11 +23,19 @@ class SignupActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
+        val roles = listOf("Parent", "Child")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, roles)
+        binding.roleDropdown.setAdapter(adapter)
+
+        binding.roleDropdown.setOnClickListener {
+            binding.roleDropdown.showDropDown()
+        }
+
         binding.signupButton.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
             val name = binding.nameEditText.text.toString()
-            val role = binding.roleEditText.text.toString()
+            val role = binding.roleDropdown.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty() && name.isNotEmpty() && role.isNotEmpty()) {
                 registerUser(email, password, name, role)
