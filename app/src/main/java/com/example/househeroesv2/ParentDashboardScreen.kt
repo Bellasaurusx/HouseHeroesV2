@@ -2,13 +2,14 @@ package com.example.househeroesv2
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatActivity
 
 class ParentDashboardScreen : Fragment(R.layout.activity_parent_dashboard) {
 
@@ -43,6 +44,14 @@ class ParentDashboardScreen : Fragment(R.layout.activity_parent_dashboard) {
         deleteAccountButton.setOnClickListener {
             val intent = Intent(requireContext(), DeleteAccountActivity::class.java)
             startActivity(intent)
+        }
+
+        val drawerLayout: DrawerLayout = view.findViewById(R.id.drawer_layout)
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar)
+
+        (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
+        toolbar.setNavigationOnClickListener {
+            drawerLayout.open()
         }
     }
 }

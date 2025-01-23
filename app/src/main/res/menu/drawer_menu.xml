@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/change_password_button"
+        android:title="@string/btn_change_password" />
+
+    <item
+        android:id="@+id/delete_account_button"
+        android:title="@string/btn_delete_account" />
+
+</menu>

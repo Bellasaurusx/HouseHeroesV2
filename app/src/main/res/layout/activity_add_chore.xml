@@ -6,18 +6,18 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:gravity="center"
-        android:background="@color/blue" >
+        android:background="@color/blue">
 
-        <TextView
-                android:id="@+id/add_chore_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title_add_chore"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp" />
+    <TextView
+            android:id="@+id/add_chore_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_add_chore"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
 
     <EditText
             android:id="@+id/chore_name"
@@ -31,34 +31,38 @@
             android:textColorHint="@color/black"
             tools:ignore="VisualLintTextFieldSize"/>
 
-        <LinearLayout
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+        <Button
+                android:id="@+id/save_chore_button"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center" >
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/btn_save_chore"
+                android:padding="12dp"
+                android:gravity="center"
+                android:backgroundTint="@color/orange_peach"
+                android:textColor="@color/black"/>
 
-            <Button
-                    android:id="@+id/save_chore_button"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="1"
-                    android:text="@string/btn_save_chore"
-                    android:padding="12dp"
-                    android:gravity="center"
-                    android:backgroundTint="@color/orange_peach"
-                    android:textColor="@color/black" />
+        <Button
+                android:id="@+id/cancel_chore_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/btn_cancel_chore"
+                android:layout_marginStart="8dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:backgroundTint="@color/orange_peach"
+                android:textColor="@color/black"/>
 
-            <Button
-                    android:id="@+id/cancel_chore_button"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="141dp"
-                    android:layout_height="match_parent"
-                    android:text="@string/btn_cancel_chore"
-                    android:layout_marginStart="8dp"
-                    android:backgroundTint="@color/orange_peach"
-                    android:textColor="@color/black" />
-
-        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

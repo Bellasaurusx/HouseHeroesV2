@@ -155,7 +155,7 @@
         <!-- Other Text -->
         <string name="login">Se connecter</string>
         <string name="signup">S\'inscrire</string>
-        <string name="signup_prompt">Vous n&apos;avez pas de compte ? S&apos;inscrire</string>
+        <string name="signup_prompt">Vous n\'avez pas de compte? S\'inscrire</string>
         <string name="tagline">Le nettoyage devient amusant !</string>
         <string name="warning_delete_account">
             Êtes-vous sûr de vouloir supprimer votre compte ? Cette action ne peut pas être annulée.

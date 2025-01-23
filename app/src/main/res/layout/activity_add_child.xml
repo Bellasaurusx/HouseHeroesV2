@@ -31,22 +31,37 @@
             android:textColorHint="@color/black"
             tools:ignore="VisualLintTextFieldSize"/>
 
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
         <Button
                 android:id="@+id/save_child_button"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
                 android:text="@string/btn_save_child"
-                android:layout_marginEnd="8dp"
+                android:padding="12dp"
+                android:gravity="center"
                 android:backgroundTint="@color/orange_peach"
                 android:textColor="@color/black"/>
 
         <Button
                 android:id="@+id/cancel_child_button"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
                 android:text="@string/btn_cancel_child"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:padding="12dp"
+                android:gravity="center"
                 android:backgroundTint="@color/orange_peach"
                 android:textColor="@color/black"/>
 
+    </LinearLayout>
 </LinearLayout>
