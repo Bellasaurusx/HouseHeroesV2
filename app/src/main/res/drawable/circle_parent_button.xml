@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Outer Circle -->
-    <item>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="?android:attr/colorControlHighlight">
+    <item android:id="@android:id/mask">
         <shape android:shape="oval">
-            <gradient
-                    android:startColor="#e5f9fc"
-                    android:endColor="#67e0f2"
-                    android:angle="45" />
+            <solid android:color="#ffffff" />
         </shape>
     </item>
 
-    <!-- Border -->
-    <item android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp">
-        <shape android:shape="oval">
-            <stroke
-                    android:width="8dp"
-            android:color="#ffffff" />
-            <solid android:color="@android:color/transparent" />
-        </shape>
+    <item android:id="@android:id/background">
+        <layer-list>
+            <!-- Outer Circle -->
+            <item>
+                <shape android:shape="oval">
+                    <gradient
+                            android:endColor="#4db0c2"
+                            android:angle="45" />
+                </shape>
+            </item>
+
+            <!-- Border -->
+            <item android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp">
+                <shape android:shape="oval">
+                    <stroke
+                            android:width="8dp"
+                            android:color="#f5a469" />
+                    <solid android:color="@android:color/transparent" />
+                </shape>
+            </item>
+        </layer-list>
     </item>
-</layer-list>
+</ripple>
