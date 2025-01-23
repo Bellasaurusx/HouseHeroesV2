@@ -37,26 +37,33 @@
                 android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your name"
+                android:hint="@string/hint_name"
                 android:inputType="textPersonName"
                 android:background="@drawable/rounded_input"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp" />
 
-        <EditText
-                android:id="@+id/roleEditText"
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your role (parent/child)"
-                android:inputType="text"
-                android:background="@drawable/rounded_input"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:hint="@string/hint_role"
+                android:layout_marginBottom="16dp">
+
+            <AutoCompleteTextView
+                    android:id="@+id/roleDropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:inputType="none"
+                    android:background="@drawable/rounded_input"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
         <EditText
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
                 android:background="@drawable/rounded_input"
                 android:padding="12dp"
@@ -67,7 +74,7 @@
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="@string/hint_password"
                 android:inputType="textPassword"
                 android:background="@drawable/rounded_input"
                 android:padding="12dp"
@@ -76,11 +83,14 @@
 
         <Button
                 android:id="@+id/signupButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="@string/signup"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
                 android:backgroundTint="@color/button_orange"
                 android:textColor="#FFFFFF"
+                android:layout_gravity="center"
                 android:layout_marginBottom="16dp" />
 
     </LinearLayout>
