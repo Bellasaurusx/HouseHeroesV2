@@ -1,155 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/sky_blue">
+        android:background="@color/light_blue"
+        android:padding="16dp">
 
-    <!-- Top App Bar -->
-    <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="0dp"
-            android:layout_height="?attr/actionBarSize"
-            android:backgroundTint="@color/sunset_yellow"
-            android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
-            android:title="@string/select_a_profile"
-            android:titleTextColor="@android:color/black"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Header Section -->
-    <TextView
-            android:id="@+id/profilesHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/choose_a_profile"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/topAppBar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp" />
-
-    <!-- Profile Buttons Section -->
     <LinearLayout
-            android:id="@+id/buttonContainer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="16dp"
-            app:layout_constraintTop_toBottomOf="@id/profilesHeader"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp">
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
 
-        <androidx.cardview.widget.CardView
+        <TextView
+                android:id="@+id/kids_settings_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                android:layout_marginEnd="16dp">
-
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="160dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="16dp">
-
-                <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button1"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:backgroundTint="@color/sunset_yellow"
-                        app:cornerRadius="40dp"
-                        android:icon="@drawable/circle_blue"
-                        android:text="" />
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sibling_1"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:gravity="center"
-                        android:layout_marginTop="8dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                android:text="@string/kids_settings"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="16dp" />
 
 
-        <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="160dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                android:layout_marginEnd="16dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="12dp">
 
-            <LinearLayout
+            <TextView
+                    android:id="@+id/notifications_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/enable_notifications"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+            <Switch
+                    android:id="@+id/notifications_switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="16dp">
-
-                <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button2"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:backgroundTint="@color/sunset_yellow"
-                        app:cornerRadius="40dp"
-                        android:icon="@drawable/circle_blue"
-                        android:text="" />
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sibling_2"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:gravity="center"
-                        android:layout_marginTop="8dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:checked="true"
+                    android:thumbTint="@color/sunset_yellow" />
+        </LinearLayout>
 
 
-        <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="160dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="12dp">
 
-            <LinearLayout
+            <TextView
+                    android:id="@+id/theme_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/theme"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+            <Spinner
+                    android:id="@+id/theme_spinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="16dp">
+                    android:entries="@color/blue" />
+        </LinearLayout>
 
-                <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button3"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:backgroundTint="@color/sunset_yellow"
-                        app:cornerRadius="40dp"
-                        android:icon="@drawable/circle_blue"
 
-                        android:text="" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="12dp">
 
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sibling_3"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:gravity="center"
-                        android:layout_marginTop="8dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            <TextView
+                    android:id="@+id/time_limit_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/set_time_limit"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+            <Switch
+                    android:id="@+id/time_limit_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/sunset_yellow" />
+        </LinearLayout>
+
+
+        <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/sunset_yellow"
+                android:textColor="@color/black" />
+
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

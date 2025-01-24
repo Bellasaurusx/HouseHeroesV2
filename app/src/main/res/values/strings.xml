@@ -99,4 +99,8 @@
     <string name="_80_coins">80 coins</string>
     <string name="late_night">Late Night</string>
     <string name="_90_coins">90 coins</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="theme">Theme</string>
+    <string name="set_time_limit">Set Time Limit</string>
+    <string name="save">Save</string>
 </resources>

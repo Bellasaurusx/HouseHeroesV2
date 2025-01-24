@@ -2,30 +2,45 @@ package com.example.househeroesv2
 
 import android.os.Bundle
 import android.view.View
-import androidx.activity.viewModels // gotta import pages...
+import android.view.animation.AnimationUtils
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.househeroesv2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    val sharedViewModel: SharedViewModel by viewModels() // added for the coins
+    val sharedViewModel: SharedViewModel by viewModels() // Added for the coins
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
 
-        //these are for the buttons that are pressed
+
+        val fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        val scaleUp = AnimationUtils.loadAnimation(this, R.anim.scale_up)
+
+
+        val buttonList = listOf(
+            binding.button1, binding.button2,
+            binding.button4, binding.button5, binding.button10,
+            binding.backButton
+        )
+
+        buttonList.forEach { button ->
+            button.startAnimation(fadeIn)
+        }
+
+
+        binding.splashLogo.startAnimation(scaleUp)
+
+
         binding.button1.setOnClickListener {
             replaceFragment(ChoreScreen())
         }
         binding.button2.setOnClickListener {
             replaceFragment(RewardShop())
-        }
-        binding.button3.setOnClickListener {
-            replaceFragment(ParentSettings())
         }
         binding.button4.setOnClickListener {
             replaceFragment(HighScores())
@@ -39,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         binding.backButton.setOnClickListener {
             replaceFragment(RewardShop())
         }
-
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -48,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.fragmentContainer, fragment)
         fragmentTransaction.commit()
 
-        // this is to hide the reward shop fragment
+        // Hide button2 for specific fragments
         if (fragment is RewardShop || fragment is ParentSettings || fragment is HighScores) {
             binding.button2.visibility = View.GONE
         } else {

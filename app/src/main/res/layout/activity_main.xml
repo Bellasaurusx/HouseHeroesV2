@@ -24,13 +24,18 @@
             android:layout_width="match_parent"
             android:layout_height="600dp"/>
 
+
     <ImageButton
             android:layout_width="100dp"
             android:layout_height="110dp"
             android:id="@+id/button5"
             android:src="@drawable/tinytim"
             android:background="@null"
-            android:layout_marginStart="54dp"/>
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:importantForAccessibility="no" />
+
     <Button
             android:text="@string/chore_list"
             android:layout_width="150dp"
@@ -53,17 +58,7 @@
             android:layout_marginStart="30dp"
             android:layout_alignParentBottom="true"
     />
-    <Button
-            android:text="@string/kids_settings"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:id="@+id/button3"
-            android:textColor="@color/black"
-            android:layout_marginBottom="15dp"
-            android:layout_marginStart="30dp"
-            android:backgroundTint="@color/sunset_yellow"
-            android:layout_alignParentBottom="true"
-    />
+
     <Button
             android:text="@string/parent_settings"
             android:layout_width="150dp"

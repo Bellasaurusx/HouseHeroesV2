@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="teal">#67f3b5</color>
     <color name="yellow">#f6c569</color>
     <color name="orange">#f5a469</color>
     <color name="button_orange">#f5a469</color>
+    <color name="light_blue">#E3F2FD</color>
     <!--added main colors -->
     <color name="orange_peach">#f5a469</color>
     <color name="sky_blue">#67E0F2</color>
