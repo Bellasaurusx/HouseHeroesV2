@@ -30,7 +30,7 @@
             android:text="@string/chorecoins_9999"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="200dp"
             app:layout_constraintTop_toTopOf="@id/rewardShopToolbar"
             app:layout_constraintBottom_toBottomOf="@id/rewardShopToolbar"
             app:layout_constraintEnd_toEndOf="@id/rewardShopToolbar"

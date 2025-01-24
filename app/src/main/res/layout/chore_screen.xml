@@ -64,7 +64,8 @@
                     android:id="@+id/checkBox1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/washer_icon"
+                    android:button="@null"
+                    android:drawableStart="@drawable/washer_icon"
                     android:background="@android:color/transparent"
                     android:text="" />
 
