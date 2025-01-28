@@ -146,20 +146,22 @@
         <string name="hint_old_password">Enter old password</string>
         <string name="hint_new_password">Enter new password</string>
         <string name="hint_confirm_password">Confirm new password</string>
-        <string name="hint_email">Email</string>
-        <string name="hint_password">Password</string>
-        <string name="hint_name">Enter your name</string>
-        <string name="hint_role">Enter your role (parent/child)</string>
+
+
         <string name="hint_passcode">Passcode</string>
 
         <!-- Other Text -->
         <string name="login">Log In</string>
-        <string name="signup">Sign Up</string>
+
         <string name="signup_prompt">Don\'t have an account? Sign Up</string>
         <string name="tagline">Cleaning Made Fun!</string>
         <string name="warning_delete_account">
             Are you sure you want to delete your account? This action cannot be undone.
         </string>
-
     </string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_role">Enter your role (parent/child)</string>
+    <string name="signup">Sign Up</string>
 </resources>

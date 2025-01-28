@@ -146,20 +146,22 @@
         <string name="hint_old_password">Entrez l\'ancien mot de passe</string>
         <string name="hint_new_password">Entrez le nouveau mot de passe</string>
         <string name="hint_confirm_password">Confirmer le nouveau mot de passe</string>
-        <string name="hint_email">EMail</string>
-        <string name="hint_password">MotDePasse</string>
-        <string name="hint_name">Entrez votre nom</string>
-        <string name="hint_role">Entrez votre rôle (parent/enfant)</string>
+
         <string name="hint_passcode">CodeDAcces</string>
 
         <!-- Other Text -->
         <string name="login">Se connecter</string>
-        <string name="signup">S\'inscrire</string>
+
         <string name="signup_prompt">Vous n\'avez pas de compte? S\'inscrire</string>
         <string name="tagline">Le nettoyage devient amusant !</string>
         <string name="warning_delete_account">
             Êtes-vous sûr de vouloir supprimer votre compte ? Cette action ne peut pas être annulée.
         </string>
-
     </string>
+
+    <string name="hint_email">EMail</string>
+    <string name="hint_password">MotDePasse</string>
+    <string name="hint_name">Entrez votre nom</string>
+    <string name="hint_role">Entrez votre rôle (parent/enfant)</string>
+    <string name="signup">S\'inscrire</string>
 </resources>
