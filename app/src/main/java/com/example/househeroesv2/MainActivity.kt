@@ -1,5 +1,6 @@
 package com.example.househeroesv2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels // gotta import pages...
@@ -34,7 +35,9 @@ class MainActivity : AppCompatActivity() {
             replaceFragment(ProfileSettings())
         }
         binding.button10.setOnClickListener {
-            replaceFragment(ParentDashboardScreen())
+            //Launch ParentDashboardScreen as an activity
+            val intent = Intent(this, ParentDashboardScreen::class.java)
+            startActivity(intent)
         }
 
     }
