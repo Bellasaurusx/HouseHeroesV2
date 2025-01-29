@@ -41,10 +41,12 @@
                 android:exported="true"/>
         <activity
                 android:name=".ParentPasscodeActivity"
-                android:exported="true"/>
+                android:exported="true"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
                 android:name=".SetPasscodeActivity"
-                android:exported="true"/>
+                android:exported="true"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
                 android:name=".ParentActivity"
                 android:exported="true"/>

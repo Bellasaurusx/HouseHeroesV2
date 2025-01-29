@@ -20,7 +20,7 @@
     <EditText
             android:id="@+id/passcodeInput"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="Passcode"
             android:inputType="numberPassword"
             android:padding="12dp"
@@ -31,6 +31,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
-            android:backgroundTint="@color/blue"
-            android:textColor="#FFFFFF" />
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:background="@drawable/ripple_button"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:stateListAnimator="@animator/button_raise"
+            android:elevation="8dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
 </LinearLayout>
