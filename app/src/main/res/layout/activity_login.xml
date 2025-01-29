@@ -18,9 +18,9 @@
 
         <ImageView
                 android:id="@+id/logo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/house_heroes_logo"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/logox"
                 android:contentDescription="@string/app_logo"
                 android:layout_marginBottom="24dp" />
     </LinearLayout>
