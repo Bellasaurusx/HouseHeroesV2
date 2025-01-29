@@ -88,8 +88,11 @@
                 android:text="@string/signup"
                 android:paddingStart="32dp"
                 android:paddingEnd="32dp"
-                android:backgroundTint="@color/button_orange"
+                android:background="@drawable/ripple_button"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FFFFFF"
+                android:stateListAnimator="@animator/button_raise"
+                android:elevation="8dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp" />
 
