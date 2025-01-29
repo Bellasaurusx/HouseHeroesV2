@@ -8,6 +8,10 @@
         android:layout_height="match_parent"
         tools:ignore="UseCompoundDrawables">
 
+<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -21,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
-        android:background="@color/blue" >
+        android:background="@color/blue"
+        android:layout_marginTop="?attr/actionBarSize">
 
 
         <LinearLayout
@@ -32,7 +37,6 @@
                 android:padding="16dp"
                 android:gravity="center_vertical|start"
                 tools:ignore="UseCompoundDrawables">
-
 
                 <TextView
                         android:id="@+id/user_name"
@@ -86,12 +90,15 @@
 
 </LinearLayout>
 
+</FrameLayout>
+
         <com.google.android.material.navigation.NavigationView
                 android:id="@+id/navigation_view"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:background="@color/white"
-                app:menu="@menu/drawer_menu" />
+                app:menu="@menu/drawer_menu"/>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

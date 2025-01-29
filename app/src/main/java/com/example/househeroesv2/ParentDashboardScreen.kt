@@ -2,15 +2,14 @@ package com.example.househeroesv2
 
 import android.content.Intent
 import android.os.Bundle
-//import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-//import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import com.google.android.material.navigation.NavigationView
 
 class ParentDashboardScreen : AppCompatActivity() {
 
@@ -38,10 +37,27 @@ class ParentDashboardScreen : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val navigationView: NavigationView = findViewById(R.id.navigation_view)
 
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(android.R.drawable.ic_menu_more)
+
         toolbar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+        navigationView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.change_password_button -> {
+                    startActivity(Intent(this, ChangePasswordActivity::class.java))
+                }
+                R.id.delete_account_button -> {
+                    startActivity(Intent(this, DeleteAccountActivity::class.java))
+                }
+            }
+            drawerLayout.closeDrawers()
+            true
         }
     }
 }
