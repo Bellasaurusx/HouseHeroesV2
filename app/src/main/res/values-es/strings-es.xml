@@ -43,6 +43,13 @@
     <string name="btn_confirm_delete">Confirmar eliminación</string>
     <string name="btn_cancel_delete">Cancelar</string>
 
+    <string name="btn_log_out">Finalizar la sesión</string>
+    <string name="title_log_out">Finalizar la sesión</string>
+
+    <string name="logout_confirm_message">¿Estás seguro de que quieres cerrar sesión?</string>
+    <string name="confirm_logout_btn">Finalizar la sesión</string>
+    <string name="cancel_logout_btn">Cancelar</string>
+
     <string name="lorem_ipsum" translatable="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id
         interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus dui nec risus. Maecenas non sodales

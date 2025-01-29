@@ -55,6 +55,9 @@ class ParentDashboardScreen : AppCompatActivity() {
                 R.id.delete_account_button -> {
                     startActivity(Intent(this, DeleteAccountActivity::class.java))
                 }
+                R.id.log_out_button -> {
+                    startActivity(Intent(this, LogOutActivity::class.java))
+                }
             }
             drawerLayout.closeDrawers()
             true

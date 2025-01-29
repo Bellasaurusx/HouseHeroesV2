@@ -9,4 +9,8 @@
         android:id="@+id/delete_account_button"
         android:title="@string/btn_delete_account" />
 
+    <item
+        android:id="@+id/log_out_button"
+        android:title="@string/btn_log_out" />
+
 </menu>

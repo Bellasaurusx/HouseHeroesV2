@@ -43,6 +43,13 @@
     <string name="btn_confirm_delete">Confirmer la suppression</string>
     <string name="btn_cancel_delete">Annuler</string>
 
+    <string name="btn_log_out">Déconnecter</string>
+    <string name="title_log_out">Déconnecter</string>
+
+    <string name="logout_confirm_message">Êtes-vous sûr de vouloir vous déconnecter?</string>
+    <string name="confirm_logout_btn">Déconnecter</string>
+    <string name="cancel_logout_btn">Annuler</string>
+
     <string name="lorem_ipsum" translatable="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id
         interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus dui nec risus. Maecenas non sodales

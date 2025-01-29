@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@color/blue">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout_confirm_message"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp" />
+
+    <Button
+            android:id="@+id/confirm_logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_logout_btn"
+            android:backgroundTint="@color/orange_peach"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+    <Button
+            android:id="@+id/cancel_logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_logout_btn"
+            android:backgroundTint="@color/orange_peach"
+            android:textColor="@color/black" />
+
+</LinearLayout>
