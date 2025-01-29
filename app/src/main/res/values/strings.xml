@@ -26,8 +26,8 @@
     <string name="btn_confirm_delete">Confirm Deletion</string>
     <string name="btn_cancel_delete">Cancel</string>
     <string name="submit">Submit</string>
-    <string name="child">child</string>
-    <string name="parent">parent</string>
+    <string name="child">Child</string>
+    <string name="parent">Parent</string>
 
     <!-- Titles -->
     <string name="title_add_chore">Add Chore</string>

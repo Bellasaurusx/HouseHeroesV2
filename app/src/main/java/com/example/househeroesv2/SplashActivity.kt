@@ -93,4 +93,5 @@ class SplashActivity : AppCompatActivity() {
             }
         }, 4000) // Total delay (4 seconds)
     }
+
 }
