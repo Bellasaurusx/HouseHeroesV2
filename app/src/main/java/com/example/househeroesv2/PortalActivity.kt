@@ -1,8 +1,13 @@
 package com.example.househeroesv2
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.view.MotionEvent
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import android.widget.TextView
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.househeroesv2.databinding.ActivityPortalBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -23,7 +28,56 @@ class PortalActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
+        addPulseEffectToText()
+        addButtonScaleEffect(binding.parentPortalButton)
+        addButtonScaleEffect(binding.childPortalButton)
+
         checkAuthentication()
+    }
+
+    private fun addPulseEffectToText() {
+        val portalTitle: TextView = findViewById(R.id.portalTitle) // Get the "Choose Your Portal" text
+        // Scale X animation
+        val scaleX = ObjectAnimator.ofFloat(portalTitle, "scaleX", 1f, 1.2f)
+        scaleX.duration = 500 // Duration of each pulse
+        scaleX.repeatCount = ObjectAnimator.INFINITE // Repeat indefinitely
+        scaleX.repeatMode = ObjectAnimator.REVERSE // Reverse animation on repeat
+        // Scale Y animation
+        val scaleY = ObjectAnimator.ofFloat(portalTitle, "scaleY", 1f, 1.2f)
+        scaleY.duration = 500
+        scaleY.repeatCount = ObjectAnimator.INFINITE
+        scaleY.repeatMode = ObjectAnimator.REVERSE
+        // Combine animations into a set
+        val animatorSet = AnimatorSet()
+        animatorSet.playTogether(scaleX, scaleY)
+        animatorSet.start()
+    }
+    private fun addButtonScaleEffect(button: View) {
+        button.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> { // Button is pressed
+                    ObjectAnimator.ofFloat(v, "scaleX", 1.1f).apply {
+                        duration = 100
+                        start()
+                    }
+                    ObjectAnimator.ofFloat(v, "scaleY", 1.1f).apply {
+                        duration = 100
+                        start()
+                    }
+                }
+                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> { // Button is released
+                    ObjectAnimator.ofFloat(v, "scaleX", 1f).apply {
+                        duration = 100
+                        start()
+                    }
+                    ObjectAnimator.ofFloat(v, "scaleY", 1f).apply {
+                        duration = 100
+                        start()
+                    }
+                }
+            }
+            false // Pass the touch event to the ripple effect
+        }
     }
     private fun checkAuthentication() {
         val currentUser = auth.currentUser

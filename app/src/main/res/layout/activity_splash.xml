@@ -8,23 +8,55 @@
     <!-- Logo -->
     <ImageView
             android:id="@+id/logoImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/house_heroes_logo"
+            android:layout_width="275dp"
+            android:layout_height="275dp"
+            android:src="@drawable/logox"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"
+            android:animation="@anim/fade_in" />
 
     <!-- Tagline -->
     <TextView
             android:id="@+id/tagline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@drawable/house_heroes_logo"
+            android:layout_below="@drawable/logox"
             android:layout_centerHorizontal="true"
             android:paddingTop="15dp"
             android:text="Cleaning Made Fun!"
             android:textColor="#F5A469"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="40sp"
+            android:fontFamily="@font/oswald"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"/>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+            android:id="@+id/loadingBar"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:max="100"
+            android:progress="0"
+            android:indeterminate="false"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:progressDrawable="@drawable/custom_progress_bar"
+            android:backgroundTint="#E0E0E0"
+            style="@android:style/Widget.ProgressBar.Horizontal" />
+    <!-- Loading Percentage -->
+    <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:textColor="#7a989b"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
 </RelativeLayout>
