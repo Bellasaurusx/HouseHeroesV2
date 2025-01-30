@@ -2,6 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/language_group"
+        android:title="@string/languages">
+        <menu>
+            <item
+                android:id="@+id/language_english"
+                android:title="@string/language_english"/>
+
+            <item
+                android:id="@+id/language_spanish"
+                android:title="@string/language_spanish"/>
+
+            <item
+                android:id="@+id/language_french"
+                android:title="@string/language_french"/>
+        </menu>
+    </item>
+
+    <item
         android:id="@+id/change_password_button"
         android:title="@string/btn_change_password" />
 

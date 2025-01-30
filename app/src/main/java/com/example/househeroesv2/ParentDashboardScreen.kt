@@ -49,6 +49,18 @@ class ParentDashboardScreen : AppCompatActivity() {
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+                R.id.language_english -> {
+                    LanguageHelper.setLocale(this, "en")
+                    recreate()
+                }
+                R.id.language_spanish -> {
+                    LanguageHelper.setLocale(this, "es")
+                    recreate()
+                }
+                R.id.language_french -> {
+                    LanguageHelper.setLocale(this, "fr")
+                    recreate()
+                }
                 R.id.change_password_button -> {
                     startActivity(Intent(this, ChangePasswordActivity::class.java))
                 }

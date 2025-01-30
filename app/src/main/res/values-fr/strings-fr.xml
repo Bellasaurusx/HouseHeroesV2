@@ -50,6 +50,11 @@
     <string name="confirm_logout_btn">Déconnecter</string>
     <string name="cancel_logout_btn">Annuler</string>
 
+    <string name="languages">Langues</string>
+    <string name="language_english">Anglais</string>
+    <string name="language_spanish">Espagnol</string>
+    <string name="language_french">Francais</string>
+
     <string name="lorem_ipsum" translatable="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id
         interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus dui nec risus. Maecenas non sodales

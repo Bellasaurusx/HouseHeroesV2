@@ -50,6 +50,11 @@
     <string name="confirm_logout_btn">Finalizar la sesión</string>
     <string name="cancel_logout_btn">Cancelar</string>
 
+    <string name="languages">Lenguas</string>
+    <string name="language_english">Ingles</string>
+    <string name="language_spanish">Espanol</string>
+    <string name="language_french">Frances</string>
+
     <string name="lorem_ipsum" translatable="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id
         interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus dui nec risus. Maecenas non sodales

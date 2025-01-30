@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
     val sharedViewModel: SharedViewModel by viewModels() // added for the coins
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val languageCode = LanguageHelper.loadLocale(this)
+        LanguageHelper.setLocale(this, languageCode)
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
