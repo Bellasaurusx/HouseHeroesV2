@@ -27,15 +27,26 @@ class SignupActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, roles)
         binding.roleDropdown.setAdapter(adapter)
 
+        binding.roleDropdown.inputType = 0
         binding.roleDropdown.setOnClickListener {
             binding.roleDropdown.showDropDown()
+        }
+        binding.roleDropdown.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                binding.roleDropdown.showDropDown()
+            }
+        }
+
+        binding.roleDropdown.setOnItemClickListener { parent, _, position, _ ->
+            val selectedRole = parent.getItemAtPosition(position).toString()
+            binding.roleDropdown.setText(selectedRole, false)
         }
 
         binding.signupButton.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
             val name = binding.nameEditText.text.toString()
-            val role = binding.roleDropdown.text.toString()
+            val role = binding.roleDropdown.text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty() && name.isNotEmpty() && role.isNotEmpty()) {
                 registerUser(email, password, name, role)
@@ -54,7 +65,7 @@ class SignupActivity : AppCompatActivity() {
                     // Save user data to Firestore
                     val user = hashMapOf(
                         "name" to name,
-                        "role" to role
+                        "role" to role.lowercase()
                     )
                     userId?.let {
                         db.collection("Users").document(it)

@@ -55,11 +55,17 @@
 
         <Button
                 android:id="@+id/loginButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Log In"
-                android:backgroundTint="@color/button_orange"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:background="@drawable/ripple_button"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FFFFFF"
+                android:stateListAnimator="@animator/button_raise"
+                android:elevation="8dp"
+                android:layout_gravity="center"
                 android:layout_marginBottom="16dp" />
 
         <TextView

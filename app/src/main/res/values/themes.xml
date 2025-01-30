@@ -1,8 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.HouseHeroesV2" parent="Theme.Material3.DayNight.NoActionBar">
-
+    <style name="Theme.HouseHeroesV2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#f5a469</item>
+        <item name="colorPrimaryDark">#f5a469</item>
+        <item name="colorAccent">#f5a469</item>
+        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
     </style>
 
-    <style name="Theme.HouseHeroesV2" parent="Base.Theme.HouseHeroesV2"/>
+
+    <style name="NoMaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#f5a469</item>
+        <item name="android:background">#f5a469</item>
+    </style>
+
 </resources>

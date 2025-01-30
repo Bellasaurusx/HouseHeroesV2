@@ -104,7 +104,7 @@ class PortalActivity : AppCompatActivity() {
             db.collection("Users").document(userId).get()
                 .addOnSuccessListener { document ->
                     if (document != null && document.exists()) {
-                        val role = document.getString("role")
+                        val role = document.getString("role")?.lowercase()
                         val name = document.getString("name")
 
                         Toast.makeText(
@@ -135,7 +135,7 @@ class PortalActivity : AppCompatActivity() {
     }
 
     private fun setupButtonsBasedOnRole(role: String?) {
-        when (role) {
+        when (role?.lowercase()) {
             "parent" -> {
                 val currentUser = auth.currentUser
                 if (currentUser != null) {

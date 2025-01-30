@@ -65,31 +65,10 @@ class SplashActivity : AppCompatActivity() {
         handler.post(progressRunnable)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val auth = FirebaseAuth.getInstance()
-            val user = auth.currentUser
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 4000) // Delay for 4 seconds
 
-            if (user != null) {
-                // Check if the user exists in Firestore
-                FirebaseFirestore.getInstance()
-                    .collection("Users")
-                    .document(user.uid)
-                    .get()
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful && task.result != null && task.result.exists()) {
-                            // User exists in Firestore, navigate to Portal
-                            startActivity(Intent(this, PortalActivity::class.java))
-                        } else {
-                            // User doesn't exist in Firestore, navigate to Login
-                            auth.signOut() // Ensure user is signed out
-                            startActivity(Intent(this, LoginActivity::class.java))
-                        }
-                        finish()
-                    }
-            } else {
-                // No user is logged in, navigate to Login screen
-                startActivity(Intent(this, LoginActivity::class.java))
-                finish()
-            }
-        }, 4000) // Delay for 4 second
     }
 }
