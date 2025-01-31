@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         val fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         val scaleUp = AnimationUtils.loadAnimation(this, R.anim.scale_up)
 
@@ -62,11 +63,5 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.fragmentContainer, fragment)
         fragmentTransaction.commit()
 
-        // Hide button2 for specific fragments
-        if (fragment is RewardShop || fragment is ParentSettings || fragment is HighScores) {
-            binding.button2.visibility = View.GONE
-        } else {
-            binding.button2.visibility = View.VISIBLE
-        }
     }
 }

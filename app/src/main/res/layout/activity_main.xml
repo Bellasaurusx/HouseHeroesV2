@@ -30,71 +30,66 @@
             android:layout_height="90dp"
             android:id="@+id/button5"
             android:src="@drawable/tinytim"
-            android:background="@null"
+            android:background="@drawable/button_frame"
+            android:scaleType="centerInside"
+            android:padding="10dp"
             android:layout_margin="20dp"
             android:layout_marginTop="20dp"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"/>
 
     <Button
             android:text="@string/chore_list"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
             android:id="@+id/button1"
             android:backgroundTint="@color/sunset_yellow"
             android:textColor="@color/black"
-            android:layout_marginBottom="195dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="15dp"
             android:layout_alignParentBottom="true"
     />
     <Button
             android:text="@string/highscores"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
             android:id="@+id/button4"
             android:backgroundTint="@color/sunset_yellow"
             android:textColor="@color/black"
-            android:layout_marginBottom="135dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="325dp"
             android:layout_alignParentBottom="true"
     />
 
     <Button
             android:text="@string/parent_settings"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
             android:id="@+id/button10"
             android:textColor="@color/black"
-            android:layout_marginBottom="75dp"
-            android:layout_marginStart="30dp"
+
+            android:layout_marginStart="170dp"
             android:backgroundTint="@color/sunset_yellow"
             android:layout_alignParentBottom="true"
     />
-    <com.google.android.material.button.MaterialButton
-            android:id="@+id/button2"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+    <Button
             android:text="@string/store"
-            android:layout_marginBottom="80dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="33dp"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:id="@+id/button2"
             android:textColor="@color/black"
-            app:cornerRadius="0dp"
-            app:backgroundTint="@color/sunset_yellow"/>
 
-    <com.google.android.material.button.MaterialButton
-            android:id="@+id/backButton"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="@string/back"
-            android:layout_marginBottom="4dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="480dp"
+            android:backgroundTint="@color/sunset_yellow"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="33dp"
+    />
+
+    <Button
+            android:text="@string/back"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:id="@+id/backButton"
             android:textColor="@color/black"
-            app:cornerRadius="0dp"
-            app:backgroundTint="@color/sunset_yellow"/>
+            android:layout_marginStart="640dp"
+            android:backgroundTint="@color/sunset_yellow"
+            android:layout_alignParentBottom="true"
+    />
 
 </RelativeLayout>

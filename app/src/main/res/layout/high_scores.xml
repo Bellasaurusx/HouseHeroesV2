@@ -39,6 +39,7 @@
                 android:padding="16dp">
 
 
+            <!-- Marcos' Card -->
             <com.google.android.material.card.MaterialCardView
                     android:layout_width="500dp"
                     android:layout_height="80dp"
@@ -53,62 +54,40 @@
                         android:padding="16dp"
                         android:gravity="center_vertical">
 
-
+                    <!-- Circular Icon -->
                     <View
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/circle_shape"
                             android:backgroundTint="@color/orange_peach" />
 
-
+                    <!-- Sibling Name -->
                     <TextView
                             android:id="@+id/siblingName1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:layout_marginStart="16dp"
-                            android:text="@string/sibling_1"
+                            android:text="Marcos"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
 
-
-            <com.google.android.material.card.MaterialCardView
-                    android:layout_width="500dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:gravity="center_vertical" tools:ignore="ExtraText">
-
-                    >
-                    <View
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/circle_shape"
-                            android:backgroundTint="@color/blue" />
-
-
+                    <!-- Chore Coin Value -->
                     <TextView
-                            android:id="@+id/siblingName2"
+                            android:id="@+id/choreCoinValue1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="@string/sibling_2"
+                            android:text="0010 💰"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
 
+            <!-- Lisa's Card (Updated with Chore Coin Value) -->
             <com.google.android.material.card.MaterialCardView
                     android:layout_width="500dp"
                     android:layout_height="80dp"
@@ -123,24 +102,36 @@
                         android:padding="16dp"
                         android:gravity="center_vertical">
 
-
+                    <!-- Circular Icon -->
                     <View
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/circle_shape"
-                            android:backgroundTint="@color/magenta" />
+                            android:backgroundTint="@color/blue" />
 
-
+                    <!-- Sibling Name -->
                     <TextView
-                            android:id="@+id/siblingName3"
+                            android:id="@+id/siblingName2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Lisa"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    <!-- Chore Coin Value -->
+                    <TextView
+                            android:id="@+id/choreCoinValue2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="@string/sibling_3"
+                            android:text="0000 💰"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>

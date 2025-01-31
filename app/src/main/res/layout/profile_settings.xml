@@ -52,7 +52,7 @@
 
 
         <LinearLayout
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
@@ -60,17 +60,25 @@
                 android:background="@drawable/rounded_background"
                 android:layout_marginBottom="12dp">
 
+            <!-- Language Label -->
             <TextView
                     android:id="@+id/theme_label"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="Language"
                     android:textSize="18sp"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="8dp"/>
 
 
+            <Spinner
+                    android:id="@+id/language_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:entries="@array/language_options"/>
         </LinearLayout>
+
 
 
         <LinearLayout
@@ -96,6 +104,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:thumbTint="@color/sunset_yellow" />
+
+
         </LinearLayout>
 
 
@@ -104,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/save"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="1dp"
                 android:backgroundTint="@color/sunset_yellow"
                 android:textColor="@color/black" />
 
