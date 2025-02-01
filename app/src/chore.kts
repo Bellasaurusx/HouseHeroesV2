@@ -1,7 +1,9 @@
 data class Chore(
     val name: String,
-    var locked: Boolean,
-    var completed: Boolean = false
+    var completed: Boolean,
+    var locked: Boolean
 ) {
-    fun isActionable(): Boolean = !locked && !completed
+    fun isActionable(): Boolean {
+        return !locked && !completed
+    }
 }

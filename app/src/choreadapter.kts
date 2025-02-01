@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ChoreAdapter(
-    private val chores: List<Chore>,
+    private val chores: MutableList<Chore>,
     private val onTaskClicked: (Chore, Int) -> Unit
 ) : RecyclerView.Adapter<ChoreAdapter.ChoreViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChoreViewHolder {
@@ -26,25 +26,20 @@ class ChoreAdapter(
 
         fun bind(chore: Chore, position: Int) {
             taskName.text = chore.name
-            setupStatusButton(statusButton, chore, position)
+            setupStatusButton(statusButton, chore, onTaskClicked, position)
         }
         private fun setupStatusButton(button: Button, chore: Chore, onTaskClicked: (Chore, Int) -> Unit, position: Int) {
 
-            when {
-                chore.locked -> {
-                    statusButton.text = "Locked"
-                    statusButton.isEnabled = false
+            button.apply {
+                setOnClickListener(null)
+                isEnabled = !(chore.locked || chore.completed)
+                text = when {
+                    chore.locked -> "Locked"
+                    chore.completed -> "Completed"
+                    else -> "Complete"
                 }
-                chore.completed -> {
-                    statusButton.text = "Completed"
-                    statusButton.isEnabled = false
-                }
-                else -> {
-                    statusButton.text = "Complete"
-                    statusButton.isEnabled = true
-                    statusButton.setOnClickListener {
-                        onTaskClicked(chore, position)
-                    }
+                if (!chore.locked && !chore.completed) {
+                    setOnClickListener { onTaskClicked(chore, position) }
                 }
             }
         }

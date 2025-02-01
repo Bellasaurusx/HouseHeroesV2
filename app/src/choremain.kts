@@ -9,6 +9,12 @@ class ChoreMain : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chore_main)
 
+        if (savedInstanceState == null) {
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragmentContainer, FirstFragment())
+            transaction.commit()
+        }
+
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -25,7 +31,7 @@ class ChoreMain : AppCompatActivity() {
             } else {
                 chore.completed = true
                 adapter.notifyItemChanged(position)
-                showSnackbar(recyclerView, "Task completed: $(chore.name)")
+                showSnackbar(recyclerView, "Task completed: ${chore.name}")
             }
         }
         recyclerView.adapter = adapter
